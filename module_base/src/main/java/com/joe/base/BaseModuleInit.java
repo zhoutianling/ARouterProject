@@ -1,9 +1,8 @@
-package com.atian.module_base.base;
+package com.joe.base;
 
 import android.app.Application;
 
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.atian.module_base.BuildConfig;
 
 import me.goldze.mvvmhabit.utils.KLog;
 

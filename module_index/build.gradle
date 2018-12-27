@@ -7,8 +7,6 @@ android {
             applicationId "com.atian.index"
         }
     }
-    //统一资源前缀，规范资源引用
-    resourcePrefix "index_"
 }
 
 dependencies {

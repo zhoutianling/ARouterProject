@@ -1,15 +1,15 @@
-package com.atian.index;
+package com.joe.main;
 
 import android.app.Application;
 
-import com.atian.module_base.base.IModuleInit;
+import com.joe.base.IModuleInit;
 
 /**
- * desc: IndexModuleInit.java
+ * desc: MainModuleInit.java
  * author: Joe
- * created at: 2018/12/27 上午10:16
+ * created at: 2018/12/27 上午10:49
  */
-public class IndexModuleInit implements IModuleInit {
+public class MainModuleInit implements IModuleInit {
     @Override
     public boolean onInitAhead(Application application) {
         return false;

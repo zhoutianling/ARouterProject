@@ -1,20 +1,22 @@
-package com.atian.mvvmproject;
+package com.joe.application;
 
-import com.atian.module_base.config.ModuleLifecycleConfig;
+import com.joe.base.config.ModuleConfig;
 
 import me.goldze.mvvmhabit.base.BaseApplication;
 
 /**
- * Created by ATiana on 2018/12/26.
+ * desc: MyApplication.java
+ * author: Joe
+ * created at: 2018/12/27 上午10:53
  */
 public class MyApplication extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
         //初始化组件(靠前)
-        ModuleLifecycleConfig.getInstance().initModuleAhead(this);
+        ModuleConfig.getInstance().initModuleAhead(this);
         //....
         //初始化组件(靠后)
-        ModuleLifecycleConfig.getInstance().initModuleLow(this);
+        ModuleConfig.getInstance().initModuleLow(this);
     }
 }

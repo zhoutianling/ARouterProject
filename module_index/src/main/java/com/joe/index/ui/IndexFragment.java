@@ -1,4 +1,4 @@
-package com.atian.index.ui;
+package com.joe.index.ui;
 
 
 import android.os.Bundle;
@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.atian.index.R;
-import com.atian.module_base.router.RouterFragmentPath;
+import com.joe.index.R;
+import com.joe.base.router.RouterFragmentPath;
 
 /**
  * Created by ATiana on 2018/12/26.

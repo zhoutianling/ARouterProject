@@ -1,11 +1,11 @@
-package com.atian.index.debug;
+package com.joe.index.debug;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.atian.index.R;
-import com.atian.index.ui.IndexFragment;
+import com.joe.index.R;
+import com.joe.index.ui.IndexFragment;
 
 
 public class DebugActivity extends AppCompatActivity {

@@ -1,11 +1,11 @@
-package com.atian.module.main.ui;
+package com.joe.main.ui;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.atian.module.main.R;
+import com.joe.main.R;
 
 public class LoadingActivity extends AppCompatActivity {
 

@@ -1,7 +1,7 @@
-package com.atian.module_base.debug;
+package com.joe.base.debug;
 
 
-import com.atian.module_base.config.ModuleLifecycleConfig;
+import com.joe.base.config.ModuleConfig;
 
 import me.goldze.mvvmhabit.base.BaseApplication;
 
@@ -11,9 +11,9 @@ public class DebugApplication extends BaseApplication {
     public void onCreate() {
         super.onCreate();
         //初始化组件(靠前)
-        ModuleLifecycleConfig.getInstance().initModuleAhead(this);
+        ModuleConfig.getInstance().initModuleAhead(this);
         //....
         //初始化组件(靠后)
-        ModuleLifecycleConfig.getInstance().initModuleLow(this);
+        ModuleConfig.getInstance().initModuleLow(this);
     }
 }

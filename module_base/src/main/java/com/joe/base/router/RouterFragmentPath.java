@@ -1,4 +1,4 @@
-package com.atian.module_base.router;
+package com.joe.base.router;
 
 /**
  * 用于组件开发中，ARouter多Fragment跳转的统一路径注册

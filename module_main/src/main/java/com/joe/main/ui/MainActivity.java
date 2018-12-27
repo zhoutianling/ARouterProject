@@ -1,4 +1,4 @@
-package com.atian.module.main.ui;
+package com.joe.main.ui;
 
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -6,9 +6,9 @@ import android.os.Bundle;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.atian.module.main.R;
-import com.atian.module_base.router.RouterActivityPath;
-import com.atian.module_base.router.RouterFragmentPath;
+import com.joe.base.router.RouterActivityPath;
+import com.joe.base.router.RouterFragmentPath;
+import com.joe.main.R;
 
 @Route(path = RouterActivityPath.Main.PAGER_MAIN)
 public class MainActivity extends AppCompatActivity {
