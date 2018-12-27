@@ -1,9 +1,13 @@
-apply plugin: 'com.android.application'
-
+if (merge.toBoolean()) {
+    //作为独立App应用运行
+    apply plugin: 'com.android.application'
+} else {
+    //作为组件运行
+    apply plugin: 'com.android.library'
+}
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     defaultConfig {
-        applicationId rootProject.ext.android.applicationId
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
@@ -13,12 +17,6 @@ android {
             annotationProcessorOptions {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
-        }
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
     sourceSets {
@@ -31,27 +29,25 @@ android {
                 //合并到宿主
                 manifest.srcFile 'src/main/AndroidManifest.xml'
                 resources {
-                    //正式版本时，排除debug文件夹下所有调试文件
-                    exclude 'src/debug/*'
+                    //正式版本时，排除alone文件夹下所有调试文件
+                    exclude 'src/main/alone/*'
                 }
             }
         }
     }
-    //统一资源前缀，规范资源引用
-    resourcePrefix "app_"
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
     dataBinding {
         enabled true
     }
 }
 
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    //单个组件是否需要独立运行
-    if (merge.toBoolean()) {
-        //组件独立运行时，宿主项目直接依赖基础库，避免编译错误
-        implementation project(':module_base')
-    } else {
-        implementation project(':module_main')
-        implementation project(':module_index')
-    }
-}
+
