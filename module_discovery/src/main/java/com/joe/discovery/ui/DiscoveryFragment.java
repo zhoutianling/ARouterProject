@@ -1,5 +1,4 @@
-package com.joe.index.ui;
-
+package com.joe.discovery.ui;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,20 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.joe.index.R;
 import com.joe.base.router.RouterFragmentPath;
-/**
- * desc: IndexFragment.java
- * author: Joe
- * created at: 2018/12/27 下午4:25
- */
-@Route(path = RouterFragmentPath.Home.PAGER_INDEX)
-public class IndexFragment extends Fragment {
+import com.joe.discovery.R;
 
+/**
+ * Created by ATiana on 2018/12/28.
+ */
+@Route(path = RouterFragmentPath.Discover.PAGER_DISCOVERY)
+public class DiscoveryFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.index_fragment, container, false);
-        return view;
+        return inflater.inflate(R.layout.discovery_layout, container, false);
     }
 }

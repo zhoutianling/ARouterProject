@@ -4,11 +4,11 @@ android {
     defaultConfig {
         //如果是独立模块，则使用当前组件的包名
         if (merge.toBoolean()) {
-            applicationId "com.joe.index"
+            applicationId "com.joe.discovery"
         }
     }
     //统一资源前缀，规范资源引用
-    resourcePrefix "index_"
+    resourcePrefix "discovery_"
 }
 
 dependencies {

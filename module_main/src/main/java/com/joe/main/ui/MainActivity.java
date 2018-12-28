@@ -29,9 +29,11 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, BaseViewMode
     public void initData() {
         mFragments = new ArrayList<>();
         Fragment indexFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.Home.PAGER_INDEX).navigation();
+        Fragment discoverFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.Discover.PAGER_DISCOVERY).navigation();
+        Fragment aboutFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.About.PAGER_ABOUT).navigation();
         mFragments.add(indexFragment);
-        mFragments.add(indexFragment);
-        mFragments.add(indexFragment);
+        mFragments.add(discoverFragment);
+        mFragments.add(aboutFragment);
         if (indexFragment != null) {
             getSupportFragmentManager().beginTransaction().add(R.id.container, indexFragment).commit();
         }

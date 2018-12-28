@@ -1,19 +1,26 @@
 package com.joe.base.router;
 
 /**
- * 用于组件开发中，ARouter多Fragment跳转的统一路径注册
- * 在这里注册添加路由路径，需要清楚的写好注释，标明功能界面
- * Created by goldze on 2018/6/21
+ * desc: RouterFragmentPath.java
+ * author: Joe
+ * created at: 2018/12/27 下午3:36
+ * <p>
+ * 注意：路劲至少要有两层，否则会编译失败
  */
 
 public class RouterFragmentPath {
-    /**
-     * 首页组件
-     */
     public static class Home {
         private static final String INDEX = "/index";
-        /*首页*/
         public static final String PAGER_INDEX = INDEX + "/index";
     }
 
+    public static class Discover {
+        private static final String DISCOVER = "/discover";
+        public static final String PAGER_DISCOVERY = DISCOVER + "/discovery";
+    }
+
+    public static class About {
+        private static final String ABOUT = "/about";
+        public static final String PAGER_ABOUT = ABOUT + "/about";
+    }
 }

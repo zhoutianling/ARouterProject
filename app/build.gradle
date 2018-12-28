@@ -37,6 +37,8 @@ android {
             }
         }
     }
+    //统一资源前缀，规范资源引用
+    resourcePrefix "app_"
     dataBinding {
         enabled true
     }
@@ -51,5 +53,7 @@ dependencies {
     } else {
         implementation project(':module_main')
         implementation project(':module_index')
+        implementation project(':module_discovery')
+        implementation project(':module_about')
     }
 }

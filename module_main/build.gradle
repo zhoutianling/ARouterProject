@@ -7,6 +7,8 @@ android {
             applicationId "com.joe.main"
         }
     }
+    //统一资源前缀，规范资源引用
+    resourcePrefix "main_"
 }
 
 dependencies {

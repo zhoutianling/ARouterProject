@@ -8,6 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="index fragment"
+        android:text="@string/index_name"
         android:textSize="50sp" />
 </LinearLayout>

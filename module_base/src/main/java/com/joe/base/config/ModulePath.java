@@ -12,6 +12,8 @@ public class ModulePath {
     private static final String BaseInit = "com.joe.base.BaseModuleInit";
     private static final String MainInit = "com.joe.main.MainModuleInit";
     private static final String IndexInit = "com.joe.index.IndexModuleInit";
+    private static final String DiscoverInit = "com.joe.discovery.DiscoveryModuleInit";
+    private static final String AboutInit = "com.joe.about.AboutModuleInit";
 
-    public static String[] initModuleNames = {BaseInit, MainInit, IndexInit};
+    public static String[] initModuleNames = {BaseInit, MainInit, IndexInit, DiscoverInit, AboutInit};
 }

@@ -8,10 +8,11 @@ import com.joe.base.IModuleInit;
 import io.reactivex.annotations.Nullable;
 
 /**
- * Created by goldze on 2018/6/21 0021.
+ * desc: ModuleConfig.java
+ * author: Joe
+ * created at: 2018/12/27 下午4:18
  * 作为组件生命周期初始化的配置类，通过反射机制，动态调用每个组件初始化逻辑
  */
-
 public class ModuleConfig {
     //内部类，在装载该内部类时才会去创建单例对象
     private static class SingletonHolder {
