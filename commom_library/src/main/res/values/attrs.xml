@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FancyCoverFlow">
+        <attr name="unselectedAlpha" format="float" />
+        <attr name="unselectedSaturation" format="float" />
+        <attr name="unselectedScale" format="float" />
+        <attr name="maxRotation" format="integer" />
+        <attr name="scaleDownGravity" format="float" />
+        <attr name="actionDistance" format="integer">
+            <enum name="auto" value="2147483647" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="BubbleSeekBar">
+        <attr name="bsb_min" format="float|reference" /> <!--min < max, default: 0.0f-->
+        <attr name="bsb_max" format="float|reference" /> <!--min < max, default: 100.0f-->
+        <attr name="bsb_progress" format="float|reference" /> <!--real time progress value, default: min-->
+        <attr name="bsb_is_float_type" format="boolean" /> <!--support for float type-->
+        <attr name="bsb_track_size" format="dimension|reference" /> <!--height of right-track(on the right of thumb), default: 2dp-->
+        <!--height of left-track(on the left of thumb), default: 2dp higher than right-track's height-->
+        <attr name="bsb_second_track_size" format="dimension|reference" />
+        <attr name="bsb_thumb_radius" format="dimension|reference" /> <!--radius of thumb, default: 2dp higher than left-track's height-->
+        <!--radius of thumb when be dragging, default: 2 times of left-track's height-->
+        <attr name="bsb_thumb_radius_on_dragging" format="dimension|reference" />
+        <attr name="bsb_track_color" format="color|reference" /> <!--color of right-track, default: R.color.colorPrimary-->
+        <attr name="bsb_second_track_color" format="color|reference" /> <!--color of left-track, default: R.color.colorAccent-->
+        <attr name="bsb_thumb_color" format="color|reference" /> <!--color of thumb, default: same as left-track's color-->
+        <attr name="bsb_section_count" format="integer|reference" /> <!--shares of whole progress(max - min), default: 10-->
+        <attr name="bsb_show_section_mark" format="boolean" /> <!--show demarcation points or not, default: false-->
+        <attr name="bsb_auto_adjust_section_mark" format="boolean" /> <!--auto scroll to the nearest section_mark or not, default: false-->
+        <attr name="bsb_show_section_text" format="boolean" /> <!--show section-text or not, default: false-->
+        <attr name="bsb_section_text_size" format="dimension|reference" /> <!--text size of section-text, default: 14sp-->
+        <attr name="bsb_section_text_color" format="color|reference" /> <!--text color of section-text, default: same as right-track's color-->
+        <!--text position of section-text relative to track, sides, bottom_sides, below_section_mark, default: sides-->
+        <attr name="bsb_section_text_position">
+            <enum name="sides" value="0" />
+            <enum name="bottom_sides" value="1" />
+            <enum name="below_section_mark" value="2" />
+        </attr>
+        <attr name="bsb_section_text_interval" format="integer" /> <!--the interval of two section-text, default: 1-->
+        <attr name="bsb_show_thumb_text" format="boolean" /> <!--show real time progress-text under thumb or not, default: false-->
+        <attr name="bsb_thumb_text_size" format="dimension|reference" /> <!--text size of progress-text, default: 14sp-->
+        <attr name="bsb_thumb_text_color" format="color|reference" /> <!--text color of progress-text, default: same as left-track's color-->
+        <attr name="bsb_show_progress_in_float" format="boolean" /> <!--show bubble-progress in float or not, default: false-->
+        <attr name="bsb_touch_to_seek" format="boolean" /> <!--touch anywhere on track to quickly seek, default: false-->
+        <attr name="bsb_seek_step_section" format="boolean" /> <!--seek one step by one section, the progress is discrete, default: false-->
+        <attr name="bsb_seek_by_section" format="boolean" /> <!--seek by section, the progress may not be linear, default: false-->
+        <attr name="bsb_bubble_color" format="color|reference" /> <!--color of bubble, default: same as left-track's color-->
+        <attr name="bsb_bubble_text_size" format="dimension|reference" /> <!--text size of bubble-progress, default: 14sp-->
+        <attr name="bsb_bubble_text_color" format="color|reference" /> <!--text color of bubble-progress, default: #ffffffff-->
+        <attr name="bsb_anim_duration" format="integer" /> <!--duration of animation, default: 200ms-->
+        <attr name="bsb_always_show_bubble" format="boolean" /> <!--bubble shows all time, default: false-->
+        <attr name="bsb_always_show_bubble_delay" format="integer" /> <!--the delay duration before bubble shows all the time, default: 200ms-->
+        <attr name="bsb_hide_bubble" format="boolean" /> <!--hide bubble, default: false-->
+        <attr name="bsb_rtl" format="boolean" /> <!--right to left, default: false-->
+        <attr name="android:enabled" />
+    </declare-styleable>
+    <declare-styleable name="LazyViewPager">
+        <attr name="init_lazy_item_offset" format="float" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <!--FaceBook闪烁控件-->
+    <declare-styleable name="ShimmerFrameLayout">
+        <attr name="shimmer_auto_start" format="boolean" />
+        <attr name="shimmer_base_alpha" format="float" />
+        <attr name="shimmer_duration" format="integer" />
+        <attr name="shimmer_repeat_count" format="integer" />
+        <attr name="shimmer_repeat_delay" format="integer" />
+        <attr name="shimmer_repeat_mode" format="enum">
+            <enum name="restart" value="1" />
+            <enum name="reverse" value="2" />
+        </attr>
+        <attr name="shimmer_angle" format="enum">
+            <enum name="cw_0" value="0" />
+            <enum name="cw_90" value="90" />
+            <enum name="cw_180" value="180" />
+            <enum name="cw_270" value="270" />
+        </attr>
+        <attr name="shimmer_dropoff" format="float" />
+        <attr name="shimmer_fixed_width" format="dimension" />
+        <attr name="shimmer_fixed_height" format="dimension" />
+        <attr name="shimmer_intensity" format="float" />
+        <attr name="shimmer_relative_width" format="float" />
+        <attr name="shimmer_relative_height" format="float" />
+        <attr name="shimmer_shape" format="enum">
+            <enum name="linear" value="0" />
+            <enum name="radial" value="1" />
+        </attr>
+        <attr name="shimmer_tilt" format="float" />
+    </declare-styleable>
+    <!--SuperTextView-->
+    <declare-styleable name="SuperTextView">
+        <attr name="corner" format="dimension" />
+        <attr name="left_top_corner" format="boolean" />
+        <attr name="right_top_corner" format="boolean" />
+        <attr name="left_bottom_corner" format="boolean" />
+        <attr name="right_bottom_corner" format="boolean" />
+        <attr name="solid" format="reference|color" />
+        <attr name="stroke_width" format="dimension" />
+        <attr name="stroke_color" format="reference|color" />
+        <attr name="state_drawable" format="reference" />
+        <attr name="state_drawable_width" format="dimension" />
+        <attr name="state_drawable_height" format="dimension" />
+        <attr name="state_drawable_padding_left" format="dimension" />
+        <attr name="state_drawable_padding_top" format="dimension" />
+        <attr name="state_drawable2" format="reference" />
+        <attr name="state_drawable2_width" format="dimension" />
+        <attr name="state_drawable2_height" format="dimension" />
+        <attr name="state_drawable2_padding_left" format="dimension" />
+        <attr name="state_drawable2_padding_top" format="dimension" />
+        <attr name="isShowState" format="boolean" />
+        <attr name="drawableAsBackground" format="boolean" />
+        <attr name="isShowState2" format="boolean" />
+        <attr name="text_stroke" format="boolean" />
+        <attr name="text_stroke_color" format="reference|color" />
+        <attr name="text_stroke_width" format="dimension" />
+        <attr name="text_fill_color" format="reference|color" />
+        <attr name="autoAdjust" format="boolean" />
+        <attr name="state_drawable_mode" format="enum">
+            <enum name="left" value="0" />
+            <enum name="top" value="1" />
+            <enum name="right" value="2" />
+            <enum name="bottom" value="3" />
+            <enum name="center" value="4" />
+            <enum name="fill" value="5" />
+            <enum name="leftTop" value="6" />
+            <enum name="rightTop" value="7" />
+            <enum name="leftBottom" value="8" />
+            <enum name="rightBottom" value="9" />
+        </attr>
+        <attr name="state_drawable2_mode" format="enum">
+            <enum name="left" value="0" />
+            <enum name="top" value="1" />
+            <enum name="right" value="2" />
+            <enum name="bottom" value="3" />
+            <enum name="center" value="4" />
+            <enum name="fill" value="5" />
+            <enum name="leftTop" value="6" />
+            <enum name="rightTop" value="7" />
+            <enum name="leftBottom" value="8" />
+            <enum name="rightBottom" value="9" />
+        </attr>
+        <attr name="shaderStartColor" format="reference|color" />
+        <attr name="shaderEndColor" format="reference|color" />
+        <attr name="shaderMode" format="enum">
+            <enum name="topToBottom" value="0" />
+            <enum name="bottomToTop" value="1" />
+            <enum name="leftToRight" value="2" />
+            <enum name="rightToLeft" value="3" />
+        </attr>
+        <attr name="shaderEnable" format="boolean" />
+        <attr name="pressBgColor" format="reference|color" />
+        <attr name="pressTextColor" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="CircleTextProgressbar">
+        <attr name="in_circle_color" format="color" />
+        <attr name="out_line_color" format="color" />
+        <attr name="progress_color" format="color" />
+        <attr name="out_line_width" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="Curve">
+        <attr name="corners" format="dimension" />
+        <attr name="pairDataKeys" format="integer" />
+        <attr name="pairDataValues" format="integer" />
+        <attr name="unitWidth" format="dimension" />
+        <attr name="backgroundColor" format="color" />
+        <attr name="contentColor" format="color" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="contentPaddingTop" format="dimension"/>
+        <attr name="contentPaddingBottom" format="dimension"/>
+        <attr name="dotTextSize" format="dimension" />
+        <attr name="dotTextColor" format="color" />
+        <attr name="axisTextSize" format="dimension" />
+        <attr name="axisTextColor" format="color" />
+        <attr name="contentPaddingStart" format="dimension" />
+        <attr name="contentPaddingEnd" format="dimension" />
+        <attr name="showXLine" format="boolean" />
+        <attr name="showXText" format="boolean" />
+        <attr name="showY" format="boolean" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="dotTextGravity" >
+            <flag name="top" value="0x01" />
+            <flag name="bottom" value="0x02" />
+            <flag name="start" value="0x04" />
+            <flag name="end" value="0x08" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="center_horizontal" value="0x20" />
+            <flag name="center" value="0x30" />
+        </attr>
+        <attr name="axisTextToLineGapHeight" format="dimension" />
+        <attr name="axisLineToCurveAreaGapHeight" format="dimension" />
+        <attr name="showAll" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ViewfinderView">
+        <attr name="corner_color" format="color"/>
+        <attr name="laser_color" format="color"/>
+        <attr name="frame_color" format="color" />
+        <attr name="mask_color" format="color" />
+        <attr name="result_point_color" format="color"/>
+        <attr name="result_color" format="color" />
+        <attr name="label_text_color" format="color"/>
+        <attr name="label_text" format="string"/>
+        <attr name="label_text_size" format="float"/>
+    </declare-styleable>
+    <declare-styleable name="HorizontalProgressBarWithNumber">
+        <attr name="progress_unreached_color" format="color"/>
+        <attr name="progress_reached_color" format="color"/>
+        <attr name="progress_reached_bar_height" format="dimension"/>
+        <attr name="progress_unreached_bar_height" format="dimension"/>
+        <attr name="progress_text_size" format="dimension"/>
+        <attr name="progress_text_color" format="color"/>
+        <attr name="progress_text_offset" format="dimension"/>
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="BezierSeekBar">
+        <attr name="bsBar_color_line" format="reference|color" />
+        <attr name="bsBar_color_ball" format="reference|color" />
+        <attr name="bsBar_color_value" format="reference|color" />
+        <attr name="bsBar_color_value_selected" format="reference|color" />
+        <attr name="bsBar_color_bg_selected" format="reference|color" />
+        <attr name="bsBar_value_min" format="integer" />
+        <attr name="bsBar_value_max" format="integer" />
+        <attr name="bsBar_value_selected" format="integer" />
+        <attr name="bsBar_unit" format="reference|string" />
+    </declare-styleable>
+</resources>

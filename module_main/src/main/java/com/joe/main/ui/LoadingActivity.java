@@ -5,14 +5,19 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.joe.base.BaseActivity;
 import com.joe.main.R;
 
-public class LoadingActivity extends AppCompatActivity {
+public class LoadingActivity extends BaseActivity {
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_loading);
+    protected int getLayoutId() {
+        return R.layout.activity_loading;
+    }
+
+    @Override
+    protected void initView() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -20,5 +25,10 @@ public class LoadingActivity extends AppCompatActivity {
                 finish();
             }
         }, 1000);
+    }
+
+    @Override
+    protected void requestData() {
+
     }
 }

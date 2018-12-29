@@ -7,7 +7,6 @@ android {
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
-
     }
     sourceSets {
         main {
@@ -29,17 +28,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
 }
 
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
     //公用的support相关库在base中依赖
-    api rootProject.ext.support["design"]
-    api rootProject.ext.support["appcompat-v7"]
-    //公用资源在base中依赖
-    api project(':res_library')
-    api rootProject.ext.dependencies.MVVMHabit
-    //阿里路由框架
-    api rootProject.ext.dependencies["arouter-api"]
-    api rootProject.ext.dependencies["tab-strip"]
+    api project(':res_library')//公用资源在base中依赖
+    api project(':commom_library')//所有第三方库统一放在通用库
 }

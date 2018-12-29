@@ -1,0 +1,25 @@
+<resources>
+    <string-array name="humidity">
+        <item>...</item>
+        <item>greater</item>
+        <item>equal</item>
+        <item>less</item>
+    </string-array>
+    <string-array name="timer_weeks">
+        <item>日</item>
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+    </string-array>
+    <string name="timer_all_day">每天</string>
+    <string name="timer_am">上午</string>
+    <string name="timer_once">单次</string>
+    <string name="timer_pm">下午</string>
+    <string name="timer_repeat">重复</string>
+    <string name="timer_weekend_day">周末</string>
+    <string name="timer_work_day">工作日</string>
+    <string name="code_select">二维码/条形码</string>
+</resources>

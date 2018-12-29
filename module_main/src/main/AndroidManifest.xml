@@ -3,7 +3,9 @@
     package="com.joe.main">
 
     <application>
-        <activity android:name="com.joe.main.ui.MainActivity"/>
+        <activity
+            android:name="com.joe.main.ui.MainActivity"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

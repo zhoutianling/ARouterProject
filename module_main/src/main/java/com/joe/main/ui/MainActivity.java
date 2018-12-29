@@ -3,41 +3,43 @@ package com.joe.main.ui;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
-import android.os.Bundle;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.joe.base.BaseActivity;
 import com.joe.base.router.RouterActivityPath;
 import com.joe.base.router.RouterFragmentPath;
-import com.joe.main.BR;
 import com.joe.main.R;
-import com.joe.main.databinding.ActivityMainBinding;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-import me.goldze.mvvmhabit.base.BaseActivity;
-import me.goldze.mvvmhabit.base.BaseViewModel;
 import me.majiajie.pagerbottomtabstrip.NavigationController;
+import me.majiajie.pagerbottomtabstrip.PageNavigationView;
 import me.majiajie.pagerbottomtabstrip.listener.OnTabItemSelectedListener;
 
 @Route(path = RouterActivityPath.Main.PAGER_MAIN)
-public class MainActivity extends BaseActivity<ActivityMainBinding, BaseViewModel> {
+public class MainActivity extends BaseActivity {
+    PageNavigationView pageNavigationView;
     private List<Fragment> mFragments;
 
+
     @Override
-    public void initData() {
-        mFragments = new ArrayList<>();
+    protected int getLayoutId() {
+        return R.layout.main_activity;
+    }
+
+    @Override
+    protected void initView() {
+        pageNavigationView = findViewById(R.id.pager_bottom_tab);
         Fragment indexFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.Home.PAGER_INDEX).navigation();
         Fragment discoverFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.Discover.PAGER_DISCOVERY).navigation();
         Fragment aboutFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.About.PAGER_ABOUT).navigation();
-        mFragments.add(indexFragment);
-        mFragments.add(discoverFragment);
-        mFragments.add(aboutFragment);
+        mFragments = Arrays.asList(indexFragment, discoverFragment, aboutFragment);
         if (indexFragment != null) {
             getSupportFragmentManager().beginTransaction().add(R.id.container, indexFragment).commit();
         }
-        NavigationController navigationController = binding.pagerBottomTab.material()
+        NavigationController navigationController = pageNavigationView.material()
                 .addItem(R.mipmap.ic_index, "首页")
                 .addItem(R.mipmap.ic_discover, "发现")
                 .addItem(R.mipmap.ic_about, "关于")
@@ -62,12 +64,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, BaseViewMode
     }
 
     @Override
-    public int initContentView(Bundle bundle) {
-        return R.layout.activity_main;
-    }
+    protected void requestData() {
 
-    @Override
-    public int initVariableId() {
-        return BR.viewModel;
     }
 }
