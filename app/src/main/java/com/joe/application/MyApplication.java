@@ -1,6 +1,7 @@
 package com.joe.application;
 
 import com.joe.base.config.ModuleConfig;
+import com.joe.commom_library.utils.Utils;
 
 import me.goldze.mvvmhabit.base.BaseApplication;
 
@@ -13,6 +14,7 @@ public class MyApplication extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+        Utils.init(this);
         //初始化组件(靠前)
         ModuleConfig.getInstance().initModuleAhead(this);
         //....

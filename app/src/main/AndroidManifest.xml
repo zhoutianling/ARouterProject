@@ -34,6 +34,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="design_width"
+            android:value="1080" />
+        <meta-data
+            android:name="design_height"
+            android:value="1920" />
         <activity
             android:name="com.joe.main.ui.LoadingActivity"
             android:theme="@style/AppTheme">
@@ -43,6 +49,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.joe.commom_library.zxing.activity.CaptureActivity" />
     </application>
 
 </manifest>

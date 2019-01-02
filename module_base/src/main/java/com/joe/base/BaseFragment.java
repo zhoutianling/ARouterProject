@@ -1,7 +1,8 @@
 package com.joe.base;
 
-import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,14 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.joe.commom_library.utils.Utils;
+
 /**
  * desc: BaseFragment.java
  * author: Joe
  * created at: 2018/12/29 下午4:00
  */
-abstract class BaseFragment<T extends BaseActivity> extends Fragment {
+public abstract class BaseFragment<T extends BaseActivity> extends Fragment {
     protected View rootView;
-    protected Activity mActivty;
+    protected BaseActivity mActivty;
 
     @Nullable
     @Override
@@ -29,14 +32,34 @@ abstract class BaseFragment<T extends BaseActivity> extends Fragment {
         return rootView;
     }
 
+    /**
+     * 封装的findViewByID方法
+     */
+    @SuppressWarnings("unchecked")
+    protected <T extends View> T $(@IdRes int id) {
+        return (T) rootView.findViewById(id);
+    }
+
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        this.mActivty = getActivity();
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        this.mActivty = (BaseActivity) context;
     }
 
     protected T getPatentActivity() {
-        return (T) getActivity();
+        return (T) mActivty;
+    }
+
+    /**
+     * 添加fragment
+     *
+     * @param fragment
+     * @param frameId
+     */
+    protected void addFragment(BaseFragment fragment, @IdRes int frameId) {
+        Utils.checkNotNull(fragment);
+        getPatentActivity().addFragment(fragment, frameId);
+
     }
 
     protected abstract int getLayoutId();

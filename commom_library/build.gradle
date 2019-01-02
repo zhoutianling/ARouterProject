@@ -45,4 +45,5 @@ dependencies {
     api libs.tab_strip
     api libs.rxpermission
     api libs.zxing
+    api libs.autolayout
 }
