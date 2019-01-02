@@ -20,7 +20,6 @@ import com.joe.index.R;
 @Route(path = RouterFragmentPath.Home.PAGER_INDEX)
 public class IndexFragment extends BaseFragment {
 
-    private TextView title;
 
     @Override
     protected int getLayoutId() {
@@ -29,18 +28,10 @@ public class IndexFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-        title = (TextView) $(R.id.tv_title);
-        title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getPatentActivity().startActivity(new Intent(getContext(), CaptureActivity.class));
-            }
-        });
 
     }
 
     @Override
     protected void requestData() {
-        title.setText("Index");
     }
 }
