@@ -16,7 +16,7 @@ public class BlurBitmapUtils {
     /**
      * 建议模糊度(在0.0到25.0之间)
      */
-    private static final int BLUR_RADIUS = 15;
+    private static final int BLUR_RADIUS = 6;
     private static final float SCALED_WIDTH = 1 / 10.0f;
     private static final float SCALED_HEIGHT = 1 / 10.0f;   // 取原图的十分之一尺寸
 

@@ -4,7 +4,7 @@ ext {
             compileSdkVersion: 27,
             buildToolsVersion: "27.0.2",
             applicationId    : "com.joe.mvvmproject",
-            minSdkVersion    : 15,
+            minSdkVersion    : 23,
             targetSdkVersion : 27,
             versionCode      : 1,
             versionName      : "1.0",

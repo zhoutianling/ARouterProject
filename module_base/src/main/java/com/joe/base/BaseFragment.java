@@ -19,12 +19,12 @@ import com.joe.commom_library.utils.Utils;
  */
 public abstract class BaseFragment<T extends BaseActivity> extends Fragment {
     protected View rootView;
-    protected BaseActivity mActivty;
+    protected BaseActivity mActivity;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (rootView == null) {
+        if (rootView == null && getLayoutId() > 0) {
             rootView = inflater.inflate(getLayoutId(), container, false);
             initView();
             requestData();
@@ -43,11 +43,11 @@ public abstract class BaseFragment<T extends BaseActivity> extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        this.mActivty = (BaseActivity) context;
+        this.mActivity = (BaseActivity) context;
     }
 
     protected T getPatentActivity() {
-        return (T) mActivty;
+        return (T) mActivity;
     }
 
     /**
