@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/gp_setting"
+        android:checkableBehavior="none">
+        <item android:title="功能">
+            <menu>
+                <item
+                    android:id="@+id/action_timer"
+                    android:icon="@mipmap/ic_index"
+                    android:title="首页" />
+                <item
+                    android:id="@+id/download_quality"
+                    android:icon="@mipmap/ic_discover"
+                    android:title="发现"
+                    android:visible="false" />
+                <item
+                    android:id="@+id/action_change_skin"
+                    android:icon="@mipmap/ic_about"
+                    android:title="关于" />
+            </menu>
+        </item>
+    </group>
+    <item android:title="其他">
+        <menu>
+            <item
+                android:id="@+id/menu_about"
+                android:icon="@mipmap/ic_about"
+                android:title="反馈" />
+            <item
+                android:id="@+id/feedback"
+                android:icon="@mipmap/ic_discover"
+                android:title="合作" />
+        </menu>
+    </item>
+</menu>
