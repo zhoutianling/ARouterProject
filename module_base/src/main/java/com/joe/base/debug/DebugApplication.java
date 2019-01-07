@@ -1,9 +1,9 @@
 package com.joe.base.debug;
 
 
+import com.joe.base.BaseApplication;
 import com.joe.base.config.ModuleConfig;
 
-import me.goldze.mvvmhabit.base.BaseApplication;
 
 
 public class DebugApplication extends BaseApplication {

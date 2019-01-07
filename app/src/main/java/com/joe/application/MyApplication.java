@@ -1,9 +1,8 @@
 package com.joe.application;
 
+import com.joe.base.BaseApplication;
 import com.joe.base.config.ModuleConfig;
 import com.joe.commom_library.utils.Utils;
-
-import me.goldze.mvvmhabit.base.BaseApplication;
 
 /**
  * desc: MyApplication.java

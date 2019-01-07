@@ -168,8 +168,8 @@
         <attr name="backgroundColor" format="color" />
         <attr name="contentColor" format="color" />
         <attr name="strokeWidth" format="dimension" />
-        <attr name="contentPaddingTop" format="dimension"/>
-        <attr name="contentPaddingBottom" format="dimension"/>
+        <attr name="contentPaddingTop" format="dimension" />
+        <attr name="contentPaddingBottom" format="dimension" />
         <attr name="dotTextSize" format="dimension" />
         <attr name="dotTextColor" format="color" />
         <attr name="axisTextSize" format="dimension" />
@@ -181,7 +181,7 @@
         <attr name="showY" format="boolean" />
         <attr name="textColor" format="color" />
         <attr name="textSize" format="dimension" />
-        <attr name="dotTextGravity" >
+        <attr name="dotTextGravity">
             <flag name="top" value="0x01" />
             <flag name="bottom" value="0x02" />
             <flag name="start" value="0x04" />
@@ -195,27 +195,27 @@
         <attr name="showAll" format="boolean" />
     </declare-styleable>
     <declare-styleable name="ViewfinderView">
-        <attr name="corner_color" format="color"/>
-        <attr name="laser_color" format="color"/>
+        <attr name="corner_color" format="color" />
+        <attr name="laser_color" format="color" />
         <attr name="frame_color" format="color" />
         <attr name="mask_color" format="color" />
-        <attr name="result_point_color" format="color"/>
+        <attr name="result_point_color" format="color" />
         <attr name="result_color" format="color" />
-        <attr name="label_text_color" format="color"/>
-        <attr name="label_text" format="string"/>
-        <attr name="label_text_size" format="float"/>
+        <attr name="label_text_color" format="color" />
+        <attr name="label_text" format="string" />
+        <attr name="label_text_size" format="float" />
     </declare-styleable>
     <declare-styleable name="HorizontalProgressBarWithNumber">
-        <attr name="progress_unreached_color" format="color"/>
-        <attr name="progress_reached_color" format="color"/>
-        <attr name="progress_reached_bar_height" format="dimension"/>
-        <attr name="progress_unreached_bar_height" format="dimension"/>
-        <attr name="progress_text_size" format="dimension"/>
-        <attr name="progress_text_color" format="color"/>
-        <attr name="progress_text_offset" format="dimension"/>
+        <attr name="progress_unreached_color" format="color" />
+        <attr name="progress_reached_color" format="color" />
+        <attr name="progress_reached_bar_height" format="dimension" />
+        <attr name="progress_unreached_bar_height" format="dimension" />
+        <attr name="progress_text_size" format="dimension" />
+        <attr name="progress_text_color" format="color" />
+        <attr name="progress_text_offset" format="dimension" />
         <attr name="progress_text_visibility" format="enum">
-            <enum name="visible" value="0"/>
-            <enum name="invisible" value="1"/>
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
         </attr>
     </declare-styleable>
     <declare-styleable name="BezierSeekBar">
@@ -228,5 +228,144 @@
         <attr name="bsBar_value_max" format="integer" />
         <attr name="bsBar_value_selected" format="integer" />
         <attr name="bsBar_unit" format="reference|string" />
+    </declare-styleable>
+    <declare-styleable name="CircularProgressDrawable">
+        <attr name="cpd_padding" format="reference|dimension" />
+        <attr name="cpd_initialAngle" format="reference|integer" />
+        <attr name="cpd_maxSweepAngle" format="reference|integer" />
+        <attr name="cpd_minSweepAngle" format="reference|integer" />
+        <attr name="cpd_strokeSize" format="reference|dimension" />
+        <attr name="cpd_strokeColor" format="reference|color" />
+        <attr name="cpd_strokeSecondaryColor" format="reference|color" />
+        <attr name="cpd_strokeColors" format="reference" />
+        <attr name="cpd_reverse" format="boolean" />
+        <attr name="cpd_rotateDuration" format="reference|integer" />
+        <attr name="cpd_transformDuration" format="reference|integer" />
+        <attr name="cpd_keepDuration" format="reference|integer" />
+        <attr name="cpd_transformInterpolator" format="reference" />
+        <attr name="cpd_inAnimDuration" format="reference|integer" />
+        <attr name="cpd_outAnimDuration" format="reference|integer" />
+        <attr name="cpd_inStepColors" format="reference" />
+        <attr name="cpd_inStepPercent" format="float" />
+        <attr name="pv_progressMode" />
+    </declare-styleable>
+    <attr name="requestFocus" format="boolean" />
+    <attr name="itemView" format="reference" />
+    <attr name="items" format="reference" />
+    <attr name="adapter" format="reference" />
+
+    <attr name="onScrollChangeCommand" format="reference" />
+    <attr name="onScrollStateChangedCommand" format="reference" />
+    <attr name="url" format="string" />
+    <attr name="onTouchCommand" format="reference" />
+
+    <attr name="onClickCommand" format="reference" />
+    <attr name="onLongClickCommand" format="reference" />
+    <attr name="onFocusChangeCommand" format="reference" />
+    <attr name="isThrottleFirst" format="boolean" />
+    <attr name="currentView" format="reference" />
+    <declare-styleable name="View">
+        <attr name="onClickCommand" />
+        <attr name="onLongClickCommand" />
+        <attr name="onFocusChangeCommand" />
+        <attr name="onTouchCommand" />
+        <attr name="isThrottleFirst" />
+        <attr name="currentView" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="AdapterView">
+        <attr name="itemView" />
+        <attr name="items" />
+        <attr name="adapter" />
+        <attr name="dropDownItemView" format="reference" />
+        <attr name="itemIds" format="reference" />
+        <attr name="itemIsEnabled" format="reference" />
+        <attr name="onScrollStateChangedCommand" />
+        <attr name="onScrollChangeCommand" />
+        <attr name="onLoadMoreCommand" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="TextView">
+        <attr name="beforeTextChangedCommand" format="reference" />
+        <attr name="onTextChangedCommand" format="reference" />
+        <attr name="afterTextChangedCommand" format="reference" />
+        <attr name="textChanged" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ImageView">
+        <attr name="url" />
+        <attr name="request_width" format="integer" />
+        <attr name="request_height" format="integer" />
+        <attr name="placeholderRes" format="reference|color" />
+        <attr name="onSuccessCommand" format="reference" />
+        <attr name="onFailureCommand" format="reference" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="ViewGroup">
+        <attr name="itemView" />
+        <attr name="observableList" format="reference" />
+
+    </declare-styleable>
+
+    <declare-styleable name="RecyclerView" parent="AdapterView">
+        <attr name="lineManager" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="RadioGroup">
+        <attr name="onCheckedChangedCommand" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="Spinner">
+        <attr name="itemDatas" format="reference" />
+        <attr name="valueReply" format="string" />
+        <attr name="onItemSelectedCommand" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="Switch">
+        <attr name="onCheckedChangeCommand" format="reference" />
+        <attr name="switchState" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ListView" parent="AdapterView">
+        <!--require BindingCommand<Integer> integer mean to position where is clicked! -->
+        <attr name="onItemClickCommand" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ViewPager">
+        <attr name="itemView" />
+        <attr name="items" />
+        <attr name="adapter" />
+        <attr name="pageTitles" format="reference" />
+        <attr name="onPageScrolledCommand" format="reference" />
+        <attr name="onPageSelectedCommand" format="reference" />
+        <attr name="onPageScrollStateChangedCommand" format="reference" />
+
+    </declare-styleable>
+
+    <declare-styleable name="NestedScrollView">
+        <attr name="onScrollChangeCommand" />
+    </declare-styleable>
+
+    <declare-styleable name="SimpleDraweeView">
+        <attr name="url" />
+    </declare-styleable>
+
+    <declare-styleable name="ScrollView">
+        <attr name="onScrollChangeCommand" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeRefreshLayout">
+        <attr name="onRefreshCommand" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="WebView">
+        <attr name="render" format="string" />
+    </declare-styleable>
+    <declare-styleable name="ControlDistributeLinearLayout">
+        <attr name="distribute_event" format="boolean" />
     </declare-styleable>
 </resources>

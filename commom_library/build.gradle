@@ -39,11 +39,31 @@ dependencies {
     api rootProject.ext.support["design"]
     api rootProject.ext.support["appcompat-v7"]
     api project(':res_library')
-    api rootProject.ext.dependencies.MVVMHabit
     //阿里路由框架
     api libs.arouter_api
-    api libs.tab_strip
     api libs.rxpermission
     api libs.zxing
     api libs.autolayout
+    //rxjava
+    api libs.rxjava
+    api libs.rxandroid
+    //rx管理View的生命周期
+    api libs.rxlifecycle
+    api libs.rxlifecycle_components
+    api libs.rxbinding
+    api libs.okhttp
+    api libs.retrofit
+    api libs.converter_gson
+    api libs.adapter_rxjava
+    api libs.glide
+    annotationProcessor libs.glide_compiler
+    api libs.gson
+    //recyclerview的databinding套装
+    api libs.bindingcollectionadapter
+    api(libs.bindingcollectionadapter_recyclerview) {
+        exclude group: 'com.android.support'
+    }
+    //Google LiveData和ViewModel组件
+    api libs.lifecycle_extensions
+    annotationProcessor libs.lifecycle_compiler
 }

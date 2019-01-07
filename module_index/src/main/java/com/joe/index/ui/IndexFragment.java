@@ -1,14 +1,9 @@
 package com.joe.index.ui;
 
 
-import android.content.Intent;
-import android.view.View;
-import android.widget.TextView;
-
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.joe.base.BaseFragment;
 import com.joe.base.router.RouterFragmentPath;
-import com.joe.commom_library.zxing.activity.CaptureActivity;
 import com.joe.index.R;
 
 
