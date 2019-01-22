@@ -1,5 +1,6 @@
 package com.joe.main.ui;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -31,7 +32,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Route(path = RouterActivityPath.Main.PAGER_MAIN)
-public class MainActivity extends BaseActivity<MainActivityBinding,BaseViewModel> implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends BaseActivity<MainActivityBinding, BaseViewModel> implements NavigationView.OnNavigationItemSelectedListener {
     private List<Fragment> mFragments;
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
@@ -45,13 +46,13 @@ public class MainActivity extends BaseActivity<MainActivityBinding,BaseViewModel
     @Override
     protected void initView() {
         setupToolBar(true);
-        navigationView = findViewById(R.id.navigation_view);
+        navigationView = $(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setItemIconTintList(null);//显示图标原有颜色
-        mViewPager = findViewById(R.id.view_pager);
-        mTabLayout = findViewById(R.id.tab_layout);
-        drawerLayout = findViewById(R.id.drawer_layout);
-        drawerHeader = findViewById(R.id.rl_header);
+        mViewPager = $(R.id.view_pager);
+        mTabLayout = $(R.id.tab_layout);
+        drawerLayout = $(R.id.drawer_layout);
+        drawerHeader = $(R.id.rl_header);
         drawerHeader.setBackgroundResource(R.mipmap.header_material);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, 0, 0);
         toggle.syncState();
@@ -96,7 +97,9 @@ public class MainActivity extends BaseActivity<MainActivityBinding,BaseViewModel
 
         int i = item.getItemId();
         if (i == R.id.item_about) {
-            startActivity(new Intent(this, AboutActivity.class));
+            ARouter.getInstance().build(RouterFragmentPath.About.PAGER_ABOUT_FEEDBACK)
+                    .withString("userName", "zhoutianling")
+                    .navigation();
         } else if (i == R.id.item_cooperation
                 ) {
 

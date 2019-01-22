@@ -16,4 +16,9 @@ public class RouterActivityPath {
         public static final String PAGER_MAIN = MAIN + "/Main";
     }
 
+    public static class Feedback {
+        private static final String ABOUT = "/about";
+        public static final String PAGE_FEEDBACK = ABOUT + "/feedback";
+    }
+
 }

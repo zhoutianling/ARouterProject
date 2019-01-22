@@ -5,7 +5,7 @@ package com.joe.base.router;
  * author: Joe
  * created at: 2018/12/27 下午3:36
  * <p>
- * 注意：路劲至少要有两层，否则会编译失败
+ * 注意：路径至少要有两层，否则会编译失败
  */
 
 public class RouterFragmentPath {
@@ -22,5 +22,6 @@ public class RouterFragmentPath {
     public static class About {
         private static final String ABOUT = "/about";
         public static final String PAGER_ABOUT = ABOUT + "/about";
+        public static final String PAGER_ABOUT_FEEDBACK = ABOUT + "/about/feedback";
     }
 }
