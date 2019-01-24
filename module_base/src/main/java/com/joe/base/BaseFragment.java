@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.joe.commom_library.utils.Utils;
+import com.joe.common.utils.Utils;
 
 /**
  * desc: BaseFragment.java
@@ -21,16 +21,16 @@ public abstract class BaseFragment<T extends BaseActivity> extends Fragment {
     protected View rootView;
     protected BaseActivity mActivity;
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (rootView == null && getLayoutId() > 0) {
-            rootView = inflater.inflate(getLayoutId(), container, false);
-            initView();
-            requestData();
-        }
-        return rootView;
-    }
+//    @Nullable
+//    @Override
+//    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+//        if (rootView == null && getLayoutId() > 0) {
+//            rootView = inflater.inflate(getLayoutId(), container, false);
+//            initView();
+//            requestData();
+//        }
+//        return rootView;
+//    }
 
     /**
      * 封装的findViewByID方法

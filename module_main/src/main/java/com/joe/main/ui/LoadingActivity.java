@@ -2,15 +2,13 @@ package com.joe.main.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 
 import com.joe.base.BaseActivity;
-import com.joe.main.BR;
+import com.joe.base.bean.BaseViewModel;
 import com.joe.main.R;
 import com.joe.main.databinding.ActivityLoadingBinding;
 
-public class LoadingActivity extends BaseActivity<ActivityLoadingBinding, LoadingModel> {
+public class LoadingActivity extends BaseActivity<ActivityLoadingBinding, BaseViewModel> {
 
 
     @Override
@@ -25,7 +23,7 @@ public class LoadingActivity extends BaseActivity<ActivityLoadingBinding, Loadin
 
     @Override
     public int initVariableId() {
-        return BR.viewModel;
+        return 0;
     }
 
     @Override

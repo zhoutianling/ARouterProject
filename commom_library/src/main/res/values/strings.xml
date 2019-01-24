@@ -22,4 +22,7 @@
     <string name="timer_weekend_day">周末</string>
     <string name="timer_work_day">工作日</string>
     <string name="code_select">二维码/条形码</string>
+    <string name="copyText">拷贝崩溃文本</string>
+    <string name="shareText">分享崩溃文本</string>
+    <string name="shareImage">分享崩溃图片</string>
 </resources>

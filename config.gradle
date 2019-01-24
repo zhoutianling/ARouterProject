@@ -11,18 +11,16 @@ ext {
     ]
     //version配置
     versions = [
-            "support-version": "27.0.2",
+            support: "27.0.2",
     ]
     //support配置
     support = [
-            "constraint-layout"       : "com.android.support.constraint:constraint-layout:1.1.0",
-            'support-v4'              : "com.android.support:support-v4:${versions["support-version"]}",
-            'appcompat-v7'            : "com.android.support:appcompat-v7:${versions["support-version"]}",
-            'recyclerview-v7'         : "com.android.support:recyclerview-v7:${versions["support-version"]}",
-            'support-v13'             : "com.android.support:support-v13:${versions["support-version"]}",
-            'support-fragment'        : "com.android.support:support-fragment:${versions["support-version"]}",
-            'design'                  : "com.android.support:design:${versions["support-version"]}",
-            'animated-vector-drawable': "com.android.support:animated-vector-drawable:${versions["support-version"]}",
+            constraint     : "com.android.support.constraint:constraint-layout:1.1.0",
+            support_v4     : "com.android.support:support-v4:${versions.support}",
+            appcompat_v7   : "com.android.support:appcompat-v7:${versions.support}",
+            recyclerview_v7: "com.android.support:recyclerview-v7:${versions.support}",
+            design         : "com.android.support:design:${versions.support}",
+            card_view      : "com.android.support:cardview-v7:${versions.support}"
     ]
     //依赖第三方配置
     dependencies = [

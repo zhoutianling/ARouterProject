@@ -1,5 +1,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.joe.commom_library" >
+    package="com.joe.common">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <application>
+        <provider
+            android:name=".crash.CrashFileProvider"
+            android:authorities="${applicationId}.crashfileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".crash.CrashActivity" />
+        <activity android:name=".zxing.activity.CaptureActivity" />
+    </application>
 </manifest>

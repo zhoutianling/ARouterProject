@@ -46,12 +46,10 @@
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.joe.commom_library.zxing.activity.CaptureActivity" />
-        <activity android:name="com.joe.main.ui.AboutActivity" />
+        <activity android:name="com.joe.main.ui.AboutActivity"></activity>
     </application>
 
 </manifest>

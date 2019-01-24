@@ -36,8 +36,9 @@ android {
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
     def libs = rootProject.ext.dependencies
-    api rootProject.ext.support["design"]
-    api rootProject.ext.support["appcompat-v7"]
+    api rootProject.ext.support.design
+    api rootProject.ext.support.support_v4
+    api rootProject.ext.support.card_view
     api project(':res_library')
     //阿里路由框架
     api libs.arouter_api

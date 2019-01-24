@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="220dp">
 
-            <com.joe.commom_library.widget.CircleImageView
+            <com.joe.common.widget.CircleImageView
                 android:id="@+id/iv_header"
                 android:layout_width="70dp"
                 android:layout_height="70dp"

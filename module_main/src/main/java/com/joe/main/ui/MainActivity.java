@@ -1,9 +1,7 @@
 package com.joe.main.ui;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -12,7 +10,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RelativeLayout;
@@ -24,7 +21,7 @@ import com.joe.base.adapter.MyPagerAdapter;
 import com.joe.base.bean.BaseViewModel;
 import com.joe.base.router.RouterActivityPath;
 import com.joe.base.router.RouterFragmentPath;
-import com.joe.commom_library.widget.dialog.MessageDialog;
+import com.joe.common.widget.dialog.MessageDialog;
 import com.joe.main.R;
 import com.joe.main.databinding.MainActivityBinding;
 
@@ -39,6 +36,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding, BaseViewMode
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private RelativeLayout drawerHeader;
+
 
     private final String[] mTitles = {"首页", "发现", "关于"};
 
@@ -97,12 +95,11 @@ public class MainActivity extends BaseActivity<MainActivityBinding, BaseViewMode
 
         int i = item.getItemId();
         if (i == R.id.item_about) {
+            startActivity(new Intent(MainActivity.this, AboutActivity.class));
+        } else if (i == R.id.item_cooperation) {
             ARouter.getInstance().build(RouterFragmentPath.About.PAGER_ABOUT_FEEDBACK)
                     .withString("userName", "zhoutianling")
-                    .navigation();
-        } else if (i == R.id.item_cooperation
-                ) {
-
+                    .navigation(MainActivity.this);
         }
         return false;
     }

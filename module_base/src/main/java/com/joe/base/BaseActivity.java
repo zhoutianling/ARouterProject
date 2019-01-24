@@ -25,10 +25,10 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.joe.base.bean.BaseViewModel;
 import com.joe.base.bus.Messenger;
-import com.joe.commom_library.base.BaseDialog;
-import com.joe.commom_library.utils.BlurBitmapUtils;
-import com.joe.commom_library.utils.Utils;
-import com.joe.commom_library.widget.dialog.WaitDialog;
+import com.joe.common.base.BaseDialog;
+import com.joe.common.utils.BlurBitmapUtils;
+import com.joe.common.utils.Utils;
+import com.joe.common.widget.dialog.WaitDialog;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 

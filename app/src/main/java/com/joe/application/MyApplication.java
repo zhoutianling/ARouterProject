@@ -2,7 +2,8 @@ package com.joe.application;
 
 import com.joe.base.BaseApplication;
 import com.joe.base.config.ModuleConfig;
-import com.joe.commom_library.utils.Utils;
+import com.joe.common.crash.CrashHandler;
+import com.joe.common.utils.Utils;
 
 /**
  * desc: MyApplication.java
@@ -13,7 +14,8 @@ public class MyApplication extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        Utils.init(this);
+        Utils.init(this);//初始化工具类中上下文
+        CrashHandler.init(this);//初始化全局异常捕获
         //初始化组件(靠前)
         ModuleConfig.getInstance().initModuleAhead(this);
         //....
