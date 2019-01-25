@@ -1,10 +1,18 @@
 <resources>
 
     <declare-styleable name="BlinkLayout">
-        <attr name="blink_color" format="color|reference"/>
-        <attr name="blink_animation_duration" format="integer|reference"/>
+        <attr name="blink_color" format="color|reference" />
+        <attr name="blink_animation_duration" format="integer|reference" />
     </declare-styleable>
     <declare-styleable name="AlignTextView">
-        <attr name="alignOnlyOneLine" format="boolean"/>
+        <attr name="alignOnlyOneLine" format="boolean" />
     </declare-styleable>
+
+    <style name="TabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/TabTextAppearance</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
 </resources>

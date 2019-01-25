@@ -133,11 +133,7 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
         super.finish();
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        onBackPressed();
-        return true;
-    }
+
 
     /**
      * 添加fragment

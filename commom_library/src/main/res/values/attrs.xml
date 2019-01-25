@@ -368,4 +368,10 @@
     <declare-styleable name="ControlDistributeLinearLayout">
         <attr name="distribute_event" format="boolean" />
     </declare-styleable>
+
+    <declare-styleable name="CoordinatorTabLayout">
+        <attr name="contentScrim" format="color" />
+        <attr name="tabIndicatorColor" format="color" />
+        <attr name="tabTextColor" format="color" />
+    </declare-styleable>
 </resources>

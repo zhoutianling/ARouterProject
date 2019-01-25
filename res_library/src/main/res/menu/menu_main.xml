@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_about"
+        android:id="@+id/menu_about"
         android:title="about"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_about_me"
+        android:id="@+id/menu_quit"
         android:title="quit"
         app:showAsAction="never" />
 </menu>
