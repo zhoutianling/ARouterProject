@@ -1,5 +1,6 @@
 package com.joe.base.net;
 
+import com.joe.base.bean.GirlsData;
 import com.joe.base.bean.NewsData;
 import com.joe.base.bean.RequestBean;
 import com.joe.common.utils.ToastUtils;
@@ -18,6 +19,10 @@ public class HttpRequestHelper {
 
     public static void getNews(String size, String index, RequestCallBack<NewsData> callBack) {
         requestData(RESTAPI.getNewsData(size, index), callBack);
+    }
+
+    public static void getGirls(String size, String index, RequestCallBack<GirlsData> callBack) {
+        requestData(RESTAPI.getGirlsData(size, index), callBack);
     }
 
     /***

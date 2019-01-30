@@ -1,5 +1,6 @@
 package com.joe.base.net;
 
+import com.joe.base.bean.GirlsData;
 import com.joe.base.bean.NewsData;
 import com.joe.base.bean.RequestBean;
 
@@ -26,4 +27,6 @@ public interface IRestfulAPI {
     @GET("api/data/Android/{size}/{index}")
     Observable<NewsData> getNewsData(@Path("size") String size, @Path("index") String index);
 
+    @GET("api/data/福利/{size}/{index}")
+    Observable<GirlsData> getGirlsData(@Path("size") String size, @Path("index") String index);
 }

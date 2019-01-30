@@ -1,6 +1,5 @@
 package com.joe.discovery.adapter;
 
-import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
@@ -22,7 +21,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.GirlsViewHolde
 
     List<NewsData.ResultsBean> newsList;
 
-    public void setGirlsList(final List<NewsData.ResultsBean> list) {
+    public void setNewsList(final List<NewsData.ResultsBean> list) {
         if (newsList == null) {
             newsList = list;
             notifyItemRangeInserted(0, newsList.size());

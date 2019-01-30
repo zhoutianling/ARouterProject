@@ -2,7 +2,6 @@ package com.joe.discovery.ui.viewmodel;
 
 import android.app.Application;
 import android.arch.core.util.Function;
-import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.Transformations;
@@ -10,6 +9,7 @@ import android.databinding.ObservableField;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+import com.joe.base.bean.BaseViewModel;
 import com.joe.base.bean.NewsData;
 import com.joe.base.net.HttpRequestHelper;
 import com.joe.base.net.RequestCallBack;
@@ -22,7 +22,7 @@ import io.reactivex.disposables.CompositeDisposable;
  * author: Joe
  * created at: 2019/1/23 下午4:04
  */
-public class DiscoveryViewModel extends AndroidViewModel {
+public class DiscoveryViewModel extends BaseViewModel {
     private static final MutableLiveData data = new MutableLiveData();
 
     {
@@ -44,20 +44,20 @@ public class DiscoveryViewModel extends AndroidViewModel {
                     return data;
                 } else {
                     final MutableLiveData<NewsData> applyData = new MutableLiveData<>();
-                    HttpRequestHelper.getNews("20", "1", new RequestCallBack<NewsData>() {
+                    HttpRequestHelper.getNews("50", "1", new RequestCallBack<NewsData>() {
                         @Override
                         public void success(NewsData newsData) {
                             if (newsData != null) {
-                                Log.i("zzz", "data:" + newsData.getResults().size());
+                                Log.i("zzz", "news data:" + newsData.getResults().size());
                                 applyData.setValue(newsData);
                             } else {
-                                Log.i("zzz", "data null");
+                                Log.i("zzz", "news data null");
                             }
                         }
 
                         @Override
                         public void error(String s) {
-
+                            Log.i("zzz", "news data error:" + s);
                         }
                     });
                     return applyData;

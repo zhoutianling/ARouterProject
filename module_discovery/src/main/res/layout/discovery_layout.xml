@@ -7,6 +7,10 @@
         <import type="com.joe.discovery.adapter.NewsAdapter" />
 
         <variable
+            name="viewModel"
+            type="com.joe.discovery.ui.viewmodel.DiscoveryViewModel" />
+
+        <variable
             name="mAdapter"
             type="NewsAdapter" />
     </data>
