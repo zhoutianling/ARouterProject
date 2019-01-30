@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="girlItem"
+            type="com.joe.base.bean.GirlsData.ResultsBean" />
+
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="4dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="5dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_default"
+            app:imageUrl="@{girlItem.url}" />
+    </android.support.v7.widget.CardView>
+</layout>
